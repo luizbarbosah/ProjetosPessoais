@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo_validacao.css">
+    <script type="text/javascript" src="interatividade.js"></script>
+    <title>Validação de Projetos</title>
+</head>
+
+<body>
+    <h1>
+        <center>Processo de Validação de Projetos - 2022</center>
+    </h1>
+
+    <form action="salvar_dados.php" method="post">
+        <div>
+            <legend><strong>Análise Geral</strong></legend><br>
+            <label for="municipio">Município:</label>
+            <select name="municipio2_input">
+                <option selected="selected">SELECIONE</option>
+                <option value="9">ABAIARA</option>
+                <option value="10">ACARAPE</option>
+                <option value="11">ACARAÚ</option>
+            </select>
+            <p></p>
+            <label for="periodo" id="periodo">Período da Capacitação: inicío </label>
+            <input type="date" required /> final <input type="date" required /><p></p>
+
+        <fieldset>
+            <legend><strong>Responsáveis pela Capacitação</strong></legend><br>
+
+            <input type="text" maxlength="50" name="nome" class="nome" placeholder="Nome Completo" required />
+            <label class="contato">Contato:</label>
+            <input type="text" class="telefone" placeholder="(99) 99999-9999" onkeyup="mascara( this, mtel )"maxlength="15" required />
+            <label>E-mail:</label>
+            <input type="email" class="e-mail" placeholder="name@example.com" required />
+            <label>Habilitado?</label>
+            <select name="habilitado">
+                <option disabled selected value="0">Opção</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+
+            <br><label for="instrutor_1">Instrutor(a):</label></br>
+
+            <input type="text" maxlength="50" name="nome" class="nome" placeholder="Nome Completo" required />
+            <label class="contato">Contato:</label>
+            <input type="text" class="telefone" placeholder="(99) 99999-9999" onkeyup="mascara( this, mtel );"
+                maxlength="15" required />
+            <label>E-mail:</label>
+            <input type="email" class="e-mail" placeholder="name@example.com" required />
+            <label for="habilitado">Habilitado?</label>
+            <select name="habilitado">
+                <option disabled selected value="0">Opção</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+
+            <br><label for="instrutor_2">Instrutor(a):</label></br>
+
+            <input type="text" maxlength="50" name="nome" class="nome" placeholder="Nome Completo" required />
+            <label class="contato">Contato:</label>
+            <input type="text" class="telefone" placeholder="(99) 99999-9999" onkeyup="mascara( this, mtel );"
+                maxlength="15" required />
+            <label>E-mail:</label>
+            <input type="email" class="e-mail" placeholder="name@example.com" required />
+            <label for="habilitado">Habilitado?</label>
+            <select name="habilitado">
+                <option disabled selected value="0">Opção</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select><br>
+        </fieldset><br>
+
+        <fieldset>
+            <legend><strong>Status da Análise</strong></legend><br>
+
+            <label for="status">Status:</label>
+            <select name="status">
+                <option disabled selected value="0">Escolha uma opção</option>
+                <option value="aprovado">Aprovado</option>
+                <option value="emAnalise">Em análise</option>
+                <option value="aguardeRetorno">Aguardando Retorno</option>
+            </select>
+        </fieldset><br>
+
+        <div>
+            <legend><strong>Observações</strong></legend><br>
+
+            <label for="Observação"></label>
+
+        <button type="submit" class="salvar" value="salvar"> <b>Salvar</b></button>
+    </form>
+    <!--
+        <?php
+                        
+            //Constantes para armazemanetos das variáveis de conxão.
+            
+            define ('localhost');            
+            define ('capacitacao');      
+            define ('usuario');        
+            define ('');
+            
+            try {
+            //conexão com MySQL:
+                $dsn = new PDO("mysql:host="localhost";dbname="capacitacao";user="usuario";password=");
+            } 
+            catch (PDOException $e) {
+                echo 'A conexão falhou e retorno a seguinte mensagem de erro: ' $e -> getMessage ();
+            }
+            $dsn = null;
+            
+            ---------------------------------------------------------------------------------------
+
+            $hostname = "localhost";
+            $bancodedados = "capacitacao";
+            $usuario = "usuario";
+            $senha = "";
+
+            $mysqli = new mysqli($hostname, $usuario, $senha, $bancodedados);
+            if ($mysqli->content_errno) {
+                echo "Falha ao conectar: (" . $mysqli->content_errno . ")" . $mysqli";
+            }
+           
+        ?> -->
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Calc. Estilo.css">
+    <title>Calculadora de Gorgetas</title>
+</head>
+<body>
+    <div id="container">
+        <div>
+            <h1 class="title">Calculadora de gorjetas</h1>
+        </div>
+        <div>
+            <form class="tipsForm" id="tipsForm">
+                <label for="conta">
+                    <p>Quanto ficou a conta?</p>
+                </label>
+                <p>
+                    R$ <input type="number" placeholder="0,00" name="conta" id="conta" class="formInput" required>
+                </p>
+                <label for="qualid_serviço">
+                    <p>Como foi seu serviço?</p>
+                </label>
+                <P>
+                    <select name="qualid_serviço" id="qualid_serviço" class="formSelect">
+                        <option disable selected value="0">-- Escolha uma opção --</option>
+                        <option value="0.30">30% - Incrível</option>
+                        <option value="0.20">20% - Bom</option>
+                        <option value="0.15">15% - Aceitavél</option>
+                        <option value="0.10">10% - Ruim</option>
+                        <option value="0.05">0,5% - Péssimo</option>
+                    </select>
+                </P>
+                <label for="pessoas">
+                    <p>Quantas pessoas vão dividir a conta?</p>
+                </label>
+                <p>
+                    <input type="number" placeholder="1" name="pessoas" id="pessoas"class="formInput" required> pessoa(s)
+                </p>
+                <button type="submeter" class="formSubmeter">Calcular</button>
+            </form>
+        </div>
+        <div id="totalTip">
+            Gorjeta total:
+            R$<span id="valorTip">0,00</span>
+            <span id="cada">cada</span>
+        </div>
+    </div>
+    <script type="text/javascript" src="Calc. Interatividade.js"></script>
+</body>
+</html>
